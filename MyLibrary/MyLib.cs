@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyAttribute;
 
-namespace Executor
+namespace MyLibrary
 {
-    class Program
+    public class MyLib
     {
-        static void Main(string[] args)
+        [ExecuteMe]
+        public void M1()
         {
-
+            Console.WriteLine("Hi I'm Hi !");
         }
     }
 }

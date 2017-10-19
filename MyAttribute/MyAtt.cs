@@ -10,6 +10,21 @@ namespace MyAttribute
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public class ExecuteMe : Attribute
     {
-        
+        private int v { get; }
+
+        public ExecuteMe() { }
+
+        public ExecuteMe(int v)
+        {
+            this.v = v;
+        }
+
+        public ExecuteMe(String a, String b)
+        {
+            
+        }
+
     }
+
+
 }

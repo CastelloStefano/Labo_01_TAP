@@ -17,29 +17,20 @@ namespace Executor
                             foreach (var meth in method.CustomAttributes)
                                 if (meth.AttributeType == typeof(ExecuteMe))
                                 {
-                                    Console.WriteLine(meth.AttributeType);
-                                    //TODO Invoke method
                                     object result = null;
-                                    ParameterInfo[] parameters = method.GetParameters();
                                     object classInstance = Activator.CreateInstance(type, null);
-
-                                    switch (parameters.Length)
+                                   
+                                    ExecuteMe[] attr = (ExecuteMe[])method.GetCustomAttributes(typeof(ExecuteMe), true);
+                                    foreach (var aExecuteMe in attr)
                                     {
-                                        case 0:
-                                            result = method.Invoke(classInstance, null);
-                                            break;
-                                        case 1:
-                                            object[] parametersArray = new object[] {1};         
-                                            result = method.Invoke(classInstance, parametersArray);
-                                            break;
-                                        case 2:
-                                            
-                                            break;
+                                        Object[] prm = aExecuteMe.param;
+                                        result = method.Invoke(classInstance, prm);
                                     }
+                                    
                                 }
                                 
                     //Console.WriteLine(type.FullName);
-                    Console.ReadLine();
+                    Console.ReadKey();
                 }
         }
     }

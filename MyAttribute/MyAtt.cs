@@ -11,6 +11,8 @@ namespace MyAttribute
     public class ExecuteMe : Attribute
     {
         private int v { get; }
+        private string v1 { get; }
+        private string v2 { get; }
 
         public ExecuteMe() { }
 
@@ -19,12 +21,10 @@ namespace MyAttribute
             this.v = v;
         }
 
-        public ExecuteMe(String a, String b)
+        public ExecuteMe(string v1, string v2)
         {
-            
+            this.v1 = v1;
+            this.v2 = v2;
         }
-
     }
-
-
 }

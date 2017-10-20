@@ -26,7 +26,7 @@ namespace MyLibrary
         [ExecuteMe("hello", "reflection")]
         public void M3(string s1, string s2)
         {
-            Console.WriteLine("M3 s1={0} s2={1}", s1, s2);
+            Console.WriteLine(" M3 s1={0} s2={1}", s1, s2);
         }
     }
 }

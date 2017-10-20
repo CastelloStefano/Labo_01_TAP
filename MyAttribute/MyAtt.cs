@@ -16,8 +16,7 @@ namespace MyAttribute
 
         public ExecuteMe() { }
 
-        public ExecuteMe(int v)
-        {
+        public ExecuteMe(int v) {
             this.v = v;
         }
 

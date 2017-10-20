@@ -18,6 +18,7 @@ namespace Executor
                                 if (meth.AttributeType == typeof(ExecuteMe))
                                 {
                                     Console.WriteLine(meth.AttributeType);
+                                    //TODO Invoke method
                                 }
                                 
                     //Console.WriteLine(type.FullName);

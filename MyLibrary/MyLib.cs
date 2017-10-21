@@ -10,8 +10,7 @@ namespace MyLibrary
     public class MyLib
     {
         [ExecuteMe]
-        public void M1()
-        {
+        public void M1(){
             Console.WriteLine("M1");
         }
 

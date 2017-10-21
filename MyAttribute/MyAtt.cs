@@ -11,7 +11,6 @@ namespace MyAttribute
     public class ExecuteMe : Attribute
     {
         public Object[] param { get; }
-
         public ExecuteMe(params object[] prm)
         {
             this.param = prm;

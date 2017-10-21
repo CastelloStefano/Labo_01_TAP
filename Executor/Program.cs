@@ -8,7 +8,7 @@ namespace Executor
     {
         static void Main(string[] args)
         {
-            var a = Assembly.LoadFrom("MyLibrary.dll");
+            var a = Assembly.LoadFrom("..\\..\\..\\MyLibrary\\bin\\Debug\\MyLibrary.dll");
             foreach (var type in a.GetTypes())
                 if (type.IsClass)
                 {

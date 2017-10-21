@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using MyAttribute;
 
@@ -9,6 +11,14 @@ namespace MyLibrary
 {
     public class MyLib
     {
+        /*
+         * An attribute argument must be
+         * a constant expression, 
+         * typeof expression 
+         * or array creation expression of an attribute parameter type
+         */
+
+
         [ExecuteMe]
         public void M1(){
             Console.WriteLine("M1");
@@ -27,5 +37,6 @@ namespace MyLibrary
         {
             Console.WriteLine("M3 s1={0} s2={1}", s1, s2);
         }
+     
     }
 }
